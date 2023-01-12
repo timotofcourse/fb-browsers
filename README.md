@@ -1,2 +1,2 @@
-# fb-browsers
-This is my application to choose your web browser
+# Browser Tool
+This is tool will be only available for Windows
