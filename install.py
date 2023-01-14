@@ -39,7 +39,8 @@ else:
     first = subprocess.Popen('powershell irm get.scoop.sh | iex')
     first.communicate()
     if first.returncode != 0:
-        tkinter.messagebox.showerror(title='Pre-installation Error', message='This app found an error trying to install scoop. Scoop is needed to operate. please install it manually by runnin this command "powershell irm get.scoop.sh | iex".')
+        # tkinter.messagebox.showerror(title='Pre-installation Error', message='This app found an error trying to install scoop. Scoop is needed to operate. please install it manually by runnin this command "powershell irm get.scoop.sh | iex".')
+        time.sleep(0)
     else:
         time.sleep(0)
     second = subprocess.Popen(gitinstall, shell=True)
