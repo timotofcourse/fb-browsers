@@ -9,7 +9,7 @@ import customtkinter
 
 # App Properties
 
-customtkinter.set_appearance_mode("system") # Auto change to dark and light mod
+customtkinter.set_appearance_mode("system") # Auto change to dark and light mode
 customtkinter.set_default_color_theme("blue") # Accent Color
 app = customtkinter.CTk()
 app.geometry("300x500") # Window Size
