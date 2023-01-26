@@ -13,6 +13,7 @@ app = customtkinter.CTk()
 app.geometry("300x500") # Window Size
 app.title('FB Browsers') # Window Title
 app.iconbitmap('icon.ico') # Window Icon
+app.resizable(False)
 
 # Needed Variables
 
