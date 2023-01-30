@@ -45,15 +45,15 @@ else:
 # Add Scoop buckets to the local user
 
 
-add1 = subprocess.Popen(basebuckets[0], shell=True)
+add1 = subprocess.Popen(scoopbucket + basebuckets[0], shell=True)
 add1.communicate()
-add2 = subprocess.Popen(basebuckets[1], shell=True)
+add2 = subprocess.Popen(scoopbucket +basebuckets[1], shell=True)
 add2.communicate()
-add3 = subprocess.Popen(basebuckets[2], shell=True)
+add3 = subprocess.Popen(scoopbucket +basebuckets[2], shell=True)
 add3.communicate()
-add4 = subprocess.Popen(basebuckets[3], shell=True)
+add4 = subprocess.Popen(scoopbucket +basebuckets[3], shell=True)
 add4.communicate()
-add5 = subprocess.Popen(basebuckets[4], shell=True)
+add5 = subprocess.Popen(scoopbucket +basebuckets[4], shell=True)
 add5.communicate()
 add6 = subprocess.Popen(fbbk, shell=True)
 add6.communicate()
