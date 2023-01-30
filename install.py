@@ -22,11 +22,7 @@ scoopfolder = home + "/scoop/apps/scoop"
 scoopinstalled = os.path.exists(scoopfolder)
 gitinstall = 'powershell scoop install git'
 scoopbucket = 'powershell scoop bucket add '
-mainbk = scoopbucket + 'main'
-extrasbk = scoopbucket + 'extras'
-npbk = scoopbucket + 'nonportable'
-javabk = scoopbucket + 'java'
-versionsbk = scoopbucket + 'versions'
+basebuckets = ['main', 'extras', 'nonportable', 'java', 'versions']
 fbbk = scoopbucket + 'filmabem https://github.com/FilmaBem2/applications.git'
 
 # Install Scoop to install the browser
@@ -49,15 +45,15 @@ else:
 # Add Scoop buckets to the local user
 
 
-add1 = subprocess.Popen(mainbk, shell=True)
+add1 = subprocess.Popen(basebuckets[0], shell=True)
 add1.communicate()
-add2 = subprocess.Popen(extrasbk, shell=True)
+add2 = subprocess.Popen(basebuckets[1], shell=True)
 add2.communicate()
-add3 = subprocess.Popen(npbk, shell=True)
+add3 = subprocess.Popen(basebuckets[2], shell=True)
 add3.communicate()
-add4 = subprocess.Popen(javabk, shell=True)
+add4 = subprocess.Popen(basebuckets[3], shell=True)
 add4.communicate()
-add5 = subprocess.Popen(versionsbk, shell=True)
+add5 = subprocess.Popen(basebuckets[4], shell=True)
 add5.communicate()
 add6 = subprocess.Popen(fbbk, shell=True)
 add6.communicate()
