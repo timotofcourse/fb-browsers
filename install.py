@@ -34,8 +34,23 @@ else:
     first = subprocess.Popen('powershell irm get.scoop.sh | iex')
     first.communicate()
     if first.returncode != 0:
-        # tkinter.messagebox.showerror(title='Pre-installation Error', message='This app found an error trying to install scoop. Scoop is needed to operate. please install it manually by runnin this command "powershell irm get.scoop.sh | iex".')
-        time.sleep(0)
+        
+        #  Create a new window
+        tpl = customtkinter.CTkToplevel()
+        tpl.geometry("400x200")
+        
+        # Code for the "OK" button
+        
+        def leave():
+            tpl.destroy()
+        
+        # Error message and ok button
+        
+        errorlbl = customtkinter.CTkLabel(tpl, text="We could not install scoop automatically. \nYou will have to do it manuall by using this command\n\"irm get.scoop.sh | iex\"")
+        errorlbl.pack()
+        okbtn = customtkinter.CTkButton(tpl, text="OK", command=leave)
+        okbtn.pack()
+
     else:
         time.sleep(0)
     second = subprocess.Popen(gitinstall, shell=True)
