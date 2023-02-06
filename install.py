@@ -46,9 +46,9 @@ else:
         
         # Error message and ok button
         
-        errorlbl = customtkinter.CTkLabel(tpl, text="We could not install scoop automatically. \nYou will have to do it manuall by using this command\n\"irm get.scoop.sh | iex\"")
+        errorlbl = customtkinter.CTkLabel(toplevel, text="We could not install scoop automatically. \nYou will have to do it manuall by using this command\n\"irm get.scoop.sh | iex\"")
         errorlbl.pack()
-        okbtn = customtkinter.CTkButton(tpl, text="OK", command=leave)
+        okbtn = customtkinter.CTkButton(toplevel, text="OK", command=leave)
         okbtn.pack()
 
     else:
