@@ -14,7 +14,7 @@ app.title('FB Browsers') # Window Title
 app.iconbitmap('icon.ico') # Window Icon
 app.resizable(False, False)
 
-# Needed Variables
+# Some Variables
 
 home = os.path.expanduser('~')
 scoopfolder = home + "/scoop/apps/scoop"
@@ -46,8 +46,8 @@ else:
         
         # Error message and ok button
         
-        errorlbl = customtkinter.CTkLabel(toplevel, text="We could not install scoop automatically. \nYou will have to do it manuall by using this command\n\"irm get.scoop.sh | iex\"")
-        errorlbl.pack()
+        errorlabel = customtkinter.CTkLabel(toplevel, text="We could not install scoop automatically. \nYou will have to do it manuall by using this command\n\"irm get.scoop.sh | iex\"")
+        errorlabel.pack()
         okbtn = customtkinter.CTkButton(toplevel, text="OK", command=leave)
         okbtn.pack()
 
@@ -60,17 +60,17 @@ else:
 
 
 while len(basebuckets) > 0:
-    add1 = subprocess.Popen(scoopbucket + basebuckets[0], shell=True)
-    add1.communicate()
+    addbuckets = subprocess.Popen(scoopbucket + basebuckets[0], shell=True)
+    addbuckets.communicate()
     basebuckets.pop(0)
 
-add2 = subprocess.Popen(fbbk, shell=True)
-add2.communicate()
+addmybucket = subprocess.Popen(fbbk, shell=True)
+addmybucket.communicate()
 
 # Run scoop update just in case
 
-updp = subprocess.Popen('powershell scoop update', shell=True)
-updp.communicate()
+update = subprocess.Popen('powershell scoop update', shell=True)
+update.communicate()
 
 # Functions to install the browsers
 
