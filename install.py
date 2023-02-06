@@ -1,4 +1,3 @@
-# import preinstall
 import time
 import subprocess
 import os
