@@ -35,13 +35,14 @@ else:
     if first.returncode != 0:
         
         #  Create a new window
-        tpl = customtkinter.CTkToplevel()
-        tpl.geometry("400x200")
+        
+        toplevel = customtkinter.CTkToplevel()
+        toplevel.geometry("400x200")
         
         # Code for the "OK" button
         
         def leave():
-            tpl.destroy()
+            toplevel.destroy()
         
         # Error message and ok button
         
