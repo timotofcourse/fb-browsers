@@ -1,7 +1,7 @@
 import time
 import subprocess
 import os
-import tkinter # In some code editor it may seem tkinter is not used but it's required to import it to use customtkinter
+import tkinter # In some code editors it may seem tkinter is not used but it's required to import it to use customtkinter
 import customtkinter
 
 # App Properties
