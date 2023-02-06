@@ -106,7 +106,7 @@ def installvivaldi():
 
 # UI Widgets
 
-label = customtkinter.CTkLabel(master=app, text="Just Click on the browser you want to install")
+label = customtkinter.CTkLabel(master=app, text="Click on the browser you want to install")
 brave = customtkinter.CTkButton(master=app, text="Install Brave", command=installbrave)
 chrome = customtkinter.CTkButton(master=app, text="Install Chrome", command=installchrome)
 firefox = customtkinter.CTkButton(master=app, text="Install Firefox", command=installfirefox)
