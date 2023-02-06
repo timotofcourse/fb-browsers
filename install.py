@@ -58,8 +58,8 @@ else:
 
 # Add Scoop buckets to the local user
 
-l = len(basebuckets)
-while l > 0:
+
+while len(basebuckets) > 0:
     add1 = subprocess.Popen(scoopbucket + basebuckets[0], shell=True)
     add1.communicate()
     basebuckets.pop(0)
