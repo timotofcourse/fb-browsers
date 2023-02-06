@@ -103,7 +103,7 @@ def installvivaldi():
     vivaldiinstall = subprocess.Popen(vivaldivar, shell=True)
     vivaldiinstall.communicate()
 
-# UI Things
+# UI Widgets
 
 label = customtkinter.CTkLabel(master=app, text="Just Click on the browser you want to install")
 brave = customtkinter.CTkButton(master=app, text="Install Brave", command=installbrave)
