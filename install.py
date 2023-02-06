@@ -56,7 +56,6 @@ else:
     second = subprocess.Popen(gitinstall, shell=True)
     second.communicate()
 
-
 # Add Scoop buckets to the local user
 
 l = len(basebuckets)
@@ -105,8 +104,6 @@ def installvivaldi():
     vivaldiinstall = subprocess.Popen(vivaldivar, shell=True)
     vivaldiinstall.communicate()
 
-
-
 # UI Things
 
 label = customtkinter.CTkLabel(master=app, text="Just Click on the browser you want to install")
@@ -123,6 +120,5 @@ firefox.pack(padx=20, pady=20)
 opera.pack(padx=20, pady=20)
 operagx.pack(padx=20, pady=20)
 vivaldi.pack(padx=20, pady=20)
-
 
 app.mainloop() # Launch App
